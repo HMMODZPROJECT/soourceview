@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Source Viewer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+
+  <div class="container">
+    <h1>Website Source Viewer</h1>
+
+    <!-- Kontrol Musik -->
+    <div class="music-controls">
+      <button id="musicBtn">▶ Play Music</button>
+      <audio id="bgMusic" loop>
+        <!-- ganti "music.mp3" dengan file/link musik kamu -->
+        <source src="music.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <!-- Kontrol utama -->
+    <div class="controls">
+      <input id="urlInput" type="text" placeholder="Masukkan URL website..." />
+      <button id="fetchBtn">Lihat Source</button>
+      <button id="proxyBtn">Gunakan CORS-proxy</button>
+      <button id="renderBtn">Render iframe</button>
+      <button id="downloadBtn">Download .html</button>
+      <button id="copyBtn">Salin ke clipboard</button>
+    </div>
+
+    <!-- Editor dan Preview -->
+    <div class="editor-preview">
+      <div class="panel">
+        <h2>Editor HTML</h2>
+        <textarea id="sourceCode" placeholder="Source code HTML akan muncul di sini..."></textarea>
+      </div>
+      <div class="panel">
+        <h2>Preview</h2>
+        <iframe id="preview"></iframe>
+      </div>
+    </div>
+
+    <div id="debug"><b>Debug / Info:</b> _</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
